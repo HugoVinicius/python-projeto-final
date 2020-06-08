@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import ContasPagar, ContasReceber
 
-# Register your models here.
+admin.site.register(ContasPagar)
+admin.site.register(ContasReceber)
