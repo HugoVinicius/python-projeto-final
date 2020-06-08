@@ -46,6 +46,11 @@ class ContasPagar(models.Model):
         default=1,
     )
 
+    class Meta:
+        verbose_name_plural: 'ContasPagar'
+
+    def __str__(self):
+        return self.nome        
     
 class ContasReceber(models.Model):
     descricao = models.CharField(max_length=200)
@@ -93,3 +98,9 @@ class ContasReceber(models.Model):
         choices=CR_SITUACAO_CHOICES,
         default=1,
     )
+
+    class Meta:
+        verbose_name_plural: 'ContasReceber'
+
+    def __str__(self):
+        return self.descricao
