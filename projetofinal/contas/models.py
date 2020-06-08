@@ -2,7 +2,7 @@ from django.db import models
 
 class ContasPagar(models.Model):
     nome = models.CharField(max_length=200)
-    valor = models.FloatField()
+    valor = models.DecimalField(max_digits=7, decimal_places=2)
     data_vencimento = models.DateField(null = True)
     data_pagamento = models.DateField(null = True)
     dt_criacao = models.DateTimeField(auto_now_add=True)
@@ -49,7 +49,7 @@ class ContasPagar(models.Model):
     
 class ContasReceber(models.Model):
     descricao = models.CharField(max_length=200)
-    valor = models.FloatField()
+    valor = models.DecimalField(max_digits=7, decimal_places=2)
     data_expectativa = models.DateField(null = True)
     data_recebimento = models.DateField(null = True)
     dt_criacao = models.DateTimeField(auto_now_add=True)
