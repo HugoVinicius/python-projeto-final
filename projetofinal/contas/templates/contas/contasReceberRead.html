@@ -4,10 +4,10 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Contas <b> a Pagar</b></h2>
+                    <h2>Contas <b> a Receber</b></h2>
                 </div>
                 <div class="col-sm-6">
-                    <a href="{% url 'cadastrar_pagamento' %}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar</span></a>
+                    <a href="{% url 'cadastrar_recebimento' %}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar</span></a>
                 </div>
             </div>
         </div>
@@ -21,9 +21,9 @@
                         </span>
                     </th>
 
-                    <th>Name</th>
-                    <th>Data Pagamento</th>
-                    <th>Data Vencimento</th>
+                    <th>Descrição</th>
+                    <th>Data Recebimento</th>
+                    <th>Data Expectativa</th>
                     <th>Valor</th>
                     <th>Ação</th>
                 </tr>
@@ -38,13 +38,13 @@
                         </span>
                     </td>
 
-                    <td>{{conta.nome}}</td>
-                    <td>{{conta.data_pagamento}}</td>
-                    <td>{{conta.data_vencimento}}</td>
+                    <td>{{conta.descricao}}</td>
+                    <td>{{conta.data_recebimento}}</td>
+                    <td>{{conta.data_expectativa}}</td>
                     <td>{{conta.valor}}</td>
                     <td>
-                        <a href="{% url 'atualizar_pagamento' conta.id  %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
-                        <a href="{% url 'excluir_pagamento' conta.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i></a>
+                        <a href="{% url 'atualizar_recebimento' conta.id  %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                        <a href="{% url 'excluir_recebimento' conta.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i></a>
                     </td>
                 </tr>
                 {% endfor %}
