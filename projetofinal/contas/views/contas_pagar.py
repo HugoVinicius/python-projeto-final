@@ -8,11 +8,6 @@ from ..models import ContasPagar
 from ..forms.contaspagar_form import ContasPagarForm
 
 @csrf_exempt
-@require_http_methods(["GET"])
-def home(request):
-	return render(request, 'contas/home.html')
-
-@csrf_exempt
 @require_http_methods(["POST","GET"])
 def listar(request):
 	data = {}
