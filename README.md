@@ -36,4 +36,15 @@ python manage.py makemigrations => Rodar migração
 
 python manage.py migrate
 
+# Imagem do Projeto
+
+- Index: http://localhost:8000/
+
+![alt text](https://github.com/HugoVinicius/python-projeto-final/blob/master/img/index.JPG)
+
+- Lista Recebimento: http://localhost:8000/pagamento/listar
+
+![Screenshot](img/listar_pagamento.JPG)
+
+
 
