@@ -1,0 +1,17 @@
+{% extends 'contas/base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="container">
+    <h2 class="text-center">{{ operacao }}</h2>
+    <form method="post">
+        {% csrf_token %} {{ form|crispy }}
+
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="{% url 'listar_pagamento' %}" class="btn btn-warning"><span>Voltar</span></a>
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'contas/base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Trabalho Final Python</h1>
+        <p class="lead">Aluno: Hugo Vinicius Reis Vaz</p>
+        <p class="lead">Curso: Desenvolvimento Web Full Stack</p>
+        <p><a class="btn btn-lg btn-success" href="{% url 'listar_pagamento' %}" role="button">Listagem de Pagamento</a></p>
+    </div>
+</div>
+{% endblock %}
