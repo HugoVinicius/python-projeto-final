@@ -1,0 +1,47 @@
+{% extends 'contas/base.html' %} {% block content %}
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2><b>Fluxo de Caixa</b></h2>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </span>
+                    </th>
+
+                    <th>Name</th>
+                    <th>Data Pagamento</th>
+                    <th>Data Vencimento</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conta in listaContas %}
+                <tr>
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox1"></label>
+                        </span>
+                    </td>
+
+                    <td>{{conta.nome}}</td>
+                    <td>{{conta.data_pagamento}}</td>
+                    <td>{{conta.data_vencimento}}</td>
+                    <td>{{conta.valor}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
