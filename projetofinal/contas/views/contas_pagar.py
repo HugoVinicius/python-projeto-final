@@ -32,15 +32,24 @@ def cadastrar(request):
     data['form'] = form
     return render(request, 'contas/contasPagarCreateUpdate.html', data)
 
-# def detalhar(request, id_pessoa):
-# 	pessoa = Pessoa.objects.get(id=id_pessoa)
-# 	return HttpResponse(f"Detalhou {pessoa.nome} (id={pessoa.id})")
+def atualizar(request, pk):	
+    data = {}
+    conta = ContasPagar.objects.get(id=pk)
+    form = ContasPagarForm(request.POST or None, instance=conta)
 
-# def excluir(request, id_pessoa):
-# 	try:
-# 		pessoa = Pessoa.objects.get(id=id_pessoa)
-# 		pessoa.delete()		
-# 		return HttpResponse(f"Excluiu {pessoa.nome} (id={pessoa.id})")
-# 	except ObjectDoesNotExist:
-# 		return HttpResponse("Pessoa não encontrada")
+    if form.is_valid():
+        form.save()
+        return redirect('listar_pagamento')
+
+    data['operacao'] = 'Atualização de Contas a Pagar'
+    data['form'] = form
+    return render(request, 'contas/contasPagarCreateUpdate.html', data)
+
+def excluir(request, pk):
+	try:
+		conta = ContasPagar.objects.get(id=pk)
+		conta.delete()		
+		return redirect('listar_pagamento')
+	except ObjectDoesNotExist:
+		return redirect('listar_pagamento')
 
