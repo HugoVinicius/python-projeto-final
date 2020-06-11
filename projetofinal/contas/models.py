@@ -43,7 +43,7 @@ class ContasPagar(models.Model):
     situacao = models.CharField(
         max_length=4,
         choices=CP_SITUACAO_CHOICES,
-        default=1,
+        default=2,
     )
 
     class Meta:
@@ -96,7 +96,7 @@ class ContasReceber(models.Model):
     situacao = models.CharField(
         max_length=4,
         choices=CR_SITUACAO_CHOICES,
-        default=1,
+        default=2,
     )
 
     class Meta:

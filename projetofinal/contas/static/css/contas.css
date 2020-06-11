@@ -288,3 +288,7 @@ table.table .avatar {
     padding: 14px 24px;
     font-size: 21px;
 }
+
+.btn-filter {
+    height: 24px;
+}

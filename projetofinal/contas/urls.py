@@ -16,6 +16,7 @@ urlpatterns = [
     path('recebimento/cadastrar', crv.cadastrar, name="cadastrar_recebimento"),
 	path('recebimento/atualizar/<int:pk>/', crv.atualizar, name="atualizar_recebimento"),
 	path('recebimento/excluir/<int:pk>/', crv.excluir, name="excluir_recebimento"),	
-	path('relatorio/', rv.relatorio, name="relatorio"),	
+	path('relatoriopagar/', rv.relatorioPagar, name="relatorioPagar"),	
+	path('relatorioreceber/', rv.relatorioReceber, name="relatorioReceber"),	
 	path('fluxocaixa/', fv.fluxocaixa, name="fluxo_caixa"),	
 ]
