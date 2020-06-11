@@ -37,6 +37,14 @@
 
 ![Screenshot](img/relatorio.JPG)
 
+- Relatório: http://localhost:8000/relatoriopagar/
+
+![Screenshot](img/relatorio_pagar.JPG)
+
+- Relatório: http://localhost:8000/relatorioreceber/
+
+![Screenshot](img/relatorio_receber.JPG)
+
 - Fluxo de Caixa: http://localhost:8000/fluxocaixa/
 
 ![Screenshot](img/fluxo_caixa.JPG)
