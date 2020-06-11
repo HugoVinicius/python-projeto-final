@@ -2,6 +2,8 @@
 
 - Aluno: Hugo Vinicius Reis Vaz
 - Curso: Desenvolvimento Web Full Stack
+- Disciplina: Python
+- Professor: Matheus Alcântara Souza
 
 # Imagem do Projeto
 
