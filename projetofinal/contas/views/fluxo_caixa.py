@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
 from ..models import ContasPagar
+from ..models import ContasReceber
 
 @csrf_exempt
 @require_http_methods(["GET"])
